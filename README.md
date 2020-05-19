@@ -2,7 +2,7 @@
 
 ## How to use
     helm repo add nicolas2lee https://nicolas2lee.github.io/php-helm-chart/
-    helm update 
+    helm repo update 
     helm search repo 
     helm install laravel-nginx nicolas2lee/laravel-nginx 
    
