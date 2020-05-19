@@ -7,6 +7,5 @@ metadata:
   labels:
     {{- include "laravel-nginx.labels" . | nindent 4 }}
 data:
-  .env: |
-{{ toYaml .Values.config.content | indent 4 }}
+{{ toYaml .Values.config.content | indent 2 }}
 {{- end }}
