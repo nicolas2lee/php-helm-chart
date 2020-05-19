@@ -9,6 +9,6 @@ entries:
     name: laravel-nginx
     type: application
     urls:
-    - https://nicolas2lee.github.io/helm-charts/laravel-nginx-0.1.0.tgz
+    - https://nicolas2lee.github.io/helm-charts/
     version: 0.1.0
 generated: "2020-05-18T10:39:06.332301+02:00"
