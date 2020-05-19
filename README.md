@@ -2,7 +2,7 @@
 ## How to build
 helm package laravel-nginx
 
-helm repo index helm-charts/ --url https://nicolas2lee.github.io/helm-charts/
+helm repo index php-helm-chart/ --url https://nicolas2lee.github.io/php-helm-chart/
 ## How to use
     helm repo add nicolas2lee https://nicolas2lee.github.io/php-helm-chart/
     helm repo update 
