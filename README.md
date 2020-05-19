@@ -5,7 +5,10 @@
     helm update 
     helm search repo 
     helm install laravel-nginx nicolas2lee/laravel-nginx 
+   
+   
     
+    helm repo index --url "https://nicolas2lee.github.io/helm-charts/" --merge index.yaml ./laravel-nginx 
     
 ## Helm standard labels
 https://helm.sh/docs/chart_best_practices/labels/
