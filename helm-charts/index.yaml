@@ -3,7 +3,7 @@ entries:
   laravel-nginx:
   - apiVersion: v2
     appVersion: "0.4"
-    created: "2020-05-19T14:44:01.24622+02:00"
+    created: "2020-05-19T15:17:44.866955+02:00"
     description: A Helm chart for Kubernetes
     digest: 2bae73ea10a4d620a043714fc47ab0197baddad08c5edb6dbd66387665bcb475
     name: laravel-nginx
@@ -11,4 +11,4 @@ entries:
     urls:
     - https://nicolas2lee.github.io/helm-charts/laravel-nginx-0.1.0.tgz
     version: 0.1.0
-generated: "2020-05-19T14:44:01.242224+02:00"
+generated: "2020-05-19T15:17:44.86349+02:00"
