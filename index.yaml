@@ -1,14 +1,14 @@
 apiVersion: v1
 entries:
-  laravel-nginx:
+  php:
   - apiVersion: v2
     appVersion: "0.4"
-    created: "2020-05-19T15:28:09.048656+02:00"
+    created: "2020-05-26T22:05:30.719239+02:00"
     description: A Helm chart for Kubernetes
-    digest: 2bae73ea10a4d620a043714fc47ab0197baddad08c5edb6dbd66387665bcb475
-    name: laravel-nginx
+    digest: ce59b462fccfde90557c69e5ec398d1eeac119977c31f270b6d52831c6109ca5
+    name: php
     type: application
     urls:
-    - https://nicolas2lee.github.io/php-helm-chart/laravel-nginx-0.1.0.tgz
+    - https://nicolas2lee.github.io/php-helm-chart/php-0.1.0.tgz
     version: 0.1.0
-generated: "2020-05-19T15:28:09.044697+02:00"
+generated: "2020-05-26T22:05:30.712396+02:00"
