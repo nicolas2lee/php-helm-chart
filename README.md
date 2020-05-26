@@ -7,7 +7,7 @@ helm repo index . --url https://nicolas2lee.github.io/php-helm-chart/
     helm repo add nicolas2lee https://nicolas2lee.github.io/php-helm-chart/
     helm repo update 
     helm search repo 
-    helm install laravel-nginx nicolas2lee/laravel-nginx 
+    helm install php-demo nicolas2lee/php
    
    
     
@@ -33,4 +33,4 @@ chart {{ .Chart.Name }}-{{ .Chart.Version }}
 function
 
 			
-		
+			git tag -a v0.1.0 -m "version 0.1.0, simple version without ssl, ingress/egress, hpa, istio"
