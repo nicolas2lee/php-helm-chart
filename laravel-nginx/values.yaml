@@ -1,7 +1,14 @@
 # Default values for laravel-nginx.
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
-
+labels:
+  appcode: "AP00000"
+  env: "dev"
+  tier: "PA"
+  opscontact: "example@example.com"
+  component: "php"
+  function: "nil"
+  version: "stable"
 replicaCount: 1
 
 image:

@@ -42,6 +42,17 @@ app.kubernetes.io/version: {{ .Chart.AppVersion | quote }}
 {{- end }}
 app.kubernetes.io/managed-by: {{ .Release.Service }}
 app.kubernetes.io/component: backend
+app: {{ .Release.Name | trimSuffix "-canary" | trimSuffix "-stable" }}
+chart: {{ .Chart.Name }}-{{ .Chart.Version}}
+release: {{ .Release.Name }}
+heritage: {{ .Release.Service }}
+appcode: {{ .Values.labels.appcode }}
+env: {{ .Values.labels.env }}
+tier: {{ .Values.labels.tier }}
+opscontact: {{ .Values.labels.opscontact }}
+component: {{ .Values.labels.component }}
+function: {{ .Values.labels.function }}
+version: {{ .Values.labels.version }}
 {{- end -}}
 
 {{/*
