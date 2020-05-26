@@ -4,22 +4,24 @@ metadata:
   name: "{{ .Release.Name }}"
   namespace: {{ .Release.Namespace | quote }}
   labels:
-    {{- include "laravel-nginx.labels" . | nindent 4 }}
+    {{- include "php.labels" . | nindent 4 }}
+  annotations:
+    rollme: {{ randAlphaNum 5 | quote }}
 spec:
   replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
-      {{- include "laravel-nginx.selectorLabels" . | nindent 6 }}
+      {{- include "php.selectorLabels" . | nindent 6 }}
   template:
     metadata:
       labels:
-        {{- include "laravel-nginx.selectorLabels" . | nindent 8 }}
+        {{- include "php.selectorLabels" . | nindent 8 }}
     spec:
     {{- with .Values.imagePullSecrets }}
       imagePullSecrets:
         {{- toYaml . | nindent 8 }}
     {{- end }}
-      serviceAccountName: {{ include "laravel-nginx.serviceAccountName" . }}
+      serviceAccountName: {{ include "php.serviceAccountName" . }}
       securityContext:
         {{- toYaml .Values.podSecurityContext | nindent 8 }}
       containers:
@@ -34,7 +36,7 @@ spec:
                 name: {{ .Values.secret.ref }}
             {{- end }}
             - configMapRef:
-                name: {{ include "laravel-nginx.fullname" . }}
+                name: {{ include "php.fullname" . }}
           ports:
             - name: http
               containerPort: 8080

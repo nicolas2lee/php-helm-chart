@@ -17,7 +17,7 @@ image:
 
 imagePullSecrets: []
 nameOverride: ""
-fullnameOverride: "laravel-nginx"
+fullnameOverride: "laravel"
 
 livenessProbe:
   httpGet:
@@ -31,7 +31,7 @@ readinessProbe:
   periodSeconds: 30
   timeoutSeconds: 6
 config:
-  content:
+  envFrom:
     APP_NAME: "Laravel"
     APP_ENV: "production"
     APP_KEY: "base64:rV6CWVRRS7NGrEpsKrHW6UpzzeOhtbtGMI82wy1k3+o="
@@ -42,18 +42,8 @@ config:
     DB_PORT: "30600"
     DB_DATABASE: "ibmclouddb"
     DB_USERNAME: "ibm_cloud_c10b1c48_aaf1_41e6_b09c_548cfb86a5ea"
-#    app_name: Laravel
-#    app_env: production
-#    app_key: base64:rV6CWVRRS7NGrEpsKrHW6UpzzeOhtbtGMI82wy1k3+o=
-#    app_debug: false
-#    log_channel: stack
-#    db_connection: pgsql
-#    db_host: dd451baf-6258-4307-b21d-b9bf8f0ab834.bn2a0fgd0tu045vmv2i0.databases.appdomain.cloud
-#    db_port: 30600
-#    db_database: ibmclouddb
-#    db_username: ibm_cloud_c10b1c48_aaf1_41e6_b09c_548cfb86a5ea
 secret:
-  ref: laravel-nginx-secret
+  ref: php-secret
 
 serviceAccount:
   # Specifies whether a service account should be created

@@ -1,0 +1,11 @@
+{{- if hasKey .Values.config "envFrom" }}
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ include "php.fullname" . }}
+  namespace: {{ .Release.Namespace | quote }}
+  labels:
+    {{- include "php.labels" . | nindent 4 }}
+data:
+{{ toYaml .Values.config.envFrom | indent 2 }}
+{{- end }}
