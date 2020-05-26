@@ -5,7 +5,7 @@ labels:
   appcode: "AP00000"
   env: "dev"
   tier: "PA"
-  opscontact: "example@example.com"
+  opscontact: "example_com"
   component: "php"
   function: "nil"
   version: "stable"
