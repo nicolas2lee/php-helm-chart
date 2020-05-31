@@ -34,3 +34,27 @@ function
 
 			
 			git tag -a v0.1.0 -m "version 0.1.0, simple version without ssl, ingress/egress, hpa, istio"
+			
+			docker run -d \
+              -it \
+              --name devtest \
+              -v "$(pwd)"/docker/rpm-package:/app \
+              centos/httpd-24-centos7
+          
+yum install http://rpms.remirepo.net/enterprise/remi-release-7.rpm
+
+#yum install yum-utils
+
+
+yum-config-manager --enable remi-php72
+yum update
+
+
+yum search php72 | more
+
+yum install php72 php72-php-fpm php72-php-gd php72-php-json php72-php-mbstring php72-php-xml php72-php-xmlrpc php72-php-opcache php-cli
+
+yum install --downloadonly --downloaddir=/app php72 php72-php-fpm php72-php-gd php72-php-json php72-php-mbstring php72-php-xml php72-php-xmlrpc php72-php-opcache php-cli
+
+
+ docker build -t nicolas2lee/php:72 .
