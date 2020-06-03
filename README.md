@@ -89,3 +89,19 @@ yum install --downloadonly --downloaddir=/app php72 php72-php-fpm php72-php-gd p
                                                 
                                                 
  docker cp 1630895c7275:/app /Users/xinrui/tao/apps/github/php-helm-chart/docker
+ 
+ 
+ 
+ yum install --downloadonly --downloaddir=/app php70 php70-php-fpm php70-php-gd php70-php-json php70-php-mbstring php70-php-xml php70-php-xmlrpc php70-php-opcache php-cli
+
+
+Default package:
+libselinux
+libselinux-python
+libselinux-utils
+
+yum install --downloadonly --downloaddir=/app  rh-php70 rh-php70-php-fpm
+
+
+                                                
+ docker cp 4929fd65ca71:/app /Users/xinrui/tao/apps/github/php-helm-chart/docker/redhat
