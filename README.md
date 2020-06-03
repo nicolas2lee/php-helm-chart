@@ -58,3 +58,34 @@ yum install --downloadonly --downloaddir=/app php72 php72-php-fpm php72-php-gd p
 
 
  docker build -t nicolas2lee/php:72 .
+ 
+ 
+ audit-libs-python
+ checkpolicy
+ libcgroup
+ libselinux-python
+ libselinux-utils
+ libsemanage-python
+ libxslt
+ policycoreutils
+ policycoreutils-python
+ python-IPy
+ scl-utils
+ setools-libs
+ 
+ 
+ yum install --downloadonly --downloaddir=/app  audit-libs-python \
+                                                checkpolicy \
+                                                libcgroup \
+                                                libselinux-python \
+                                                libselinux-utils \
+                                                libsemanage-python \
+                                                libxslt \
+                                                policycoreutils \
+                                                policycoreutils-python \
+                                                python-IPy \
+                                                scl-utils \
+                                                setools-libs
+                                                
+                                                
+ docker cp 1630895c7275:/app /Users/xinrui/tao/apps/github/php-helm-chart/docker
