@@ -112,3 +112,10 @@ yum install --downloadonly --downloaddir=/app  rh-php70 rh-php70-php-fpm
   environment-modules
   libargon2
   scl-utils
+  
+  policycoreutils-python
+  libselinux-utils
+  libedit
+  libX11
+  
+  libtcl
