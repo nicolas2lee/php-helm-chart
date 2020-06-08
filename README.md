@@ -104,7 +104,7 @@ yum install --downloadonly --downloaddir=/app  rh-php70 rh-php70-php-fpm
 
 
                                                 
- docker cp 4929fd65ca71:/app /Users/xinrui/tao/apps/github/php-helm-chart/docker/repo
+ docker cp 6a80e7fdcccc:/app /Users/xinrui/tao/apps/github/php-helm-chart/docker/repo/php7
  
  https://download-ib01.fedoraproject.org/pub/epel/7/aarch64/Packages/e/epel-release-7-12.noarch.rpm
  
@@ -119,3 +119,6 @@ yum install --downloadonly --downloaddir=/app  rh-php70 rh-php70-php-fpm
   libX11
   
   libtcl
+  
+  yum install --downloadonly --downloaddir=/app php php-cli php-mbstring php-fpm
+  
