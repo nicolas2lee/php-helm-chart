@@ -12,8 +12,9 @@ labels:
 replicaCount: 1
 
 image:
-  repository: de.icr.io/php-demo/laravel-nginx
+  repository: de.icr.io/berich/bcom
   pullPolicy: Always
+  tag: latest
 
 imagePullSecrets: []
 nameOverride: ""
@@ -42,8 +43,8 @@ config:
     DB_PORT: "30600"
     DB_DATABASE: "ibmclouddb"
     DB_USERNAME: "ibm_cloud_c10b1c48_aaf1_41e6_b09c_548cfb86a5ea"
-secret:
-  ref: php-secret
+#secret:
+#  ref: php-secret
 
 serviceAccount:
   # Specifies whether a service account should be created
