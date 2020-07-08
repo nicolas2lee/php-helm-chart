@@ -31,9 +31,9 @@ spec:
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           envFrom:
-            {{- if hasKey .Values "secret" }}
+            {{- if hasKey .Values "passwords" }}
             - secretRef:
-                name: {{ .Values.secret.ref }}
+                name: {{ include "php.fullname" . }}
             {{- end }}
             - configMapRef:
                 name: {{ include "php.fullname" . }}

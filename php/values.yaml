@@ -98,3 +98,6 @@ nodeSelector: {}
 tolerations: []
 
 affinity: {}
+
+passwords:
+  DB_PASSWORD: nil
