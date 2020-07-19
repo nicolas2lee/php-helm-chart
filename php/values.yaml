@@ -99,5 +99,7 @@ tolerations: []
 
 affinity: {}
 
-passwords:
-  DB_PASSWORD: nil
+secret:
+  enabled: true
+  passwords:
+    DB_PASSWORD: nil
