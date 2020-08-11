@@ -1,0 +1,12 @@
+apiVersion: policy/v1beta1
+kind: PodDisruptionBudget
+metadata:
+  name: "{{ .Release.Name }}"
+  namespace: {{ .Release.Namespace | quote }}
+  labels:
+  {{- include "php.labels" . | nindent 4 }}
+spec:
+  minAvailable: {{ .Values.podDisruptionBudget.minAvailable}}
+  selector:
+    matchLabels:
+  {{- include "php.labels" . | nindent 6 }}

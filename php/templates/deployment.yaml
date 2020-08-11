@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: "{{ .Release.Name }}"
+  name: {{ include "php.fullname" . }}
   namespace: {{ .Release.Namespace | quote }}
   labels:
     {{- include "php.labels" . | nindent 4 }}

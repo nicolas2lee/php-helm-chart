@@ -3,12 +3,12 @@ entries:
   php:
   - apiVersion: v2
     appVersion: "0.4"
-    created: "2020-07-19T21:34:52.356953+02:00"
+    created: "2020-08-11T16:59:10.9573235+02:00"
     description: A Helm chart for Kubernetes
-    digest: 97013c79967ec9eb6a0c3774f9344965768a8ddea3bc32907e115359e875f0d0
+    digest: 2a63d3f6c09f46e8f750482714e440b69ce05ecaeff0007d92c19d1bf6af897f
     name: php
     type: application
     urls:
     - https://nicolas2lee.github.io/php-helm-chart/php-0.1.0.tgz
     version: 0.1.0
-generated: "2020-07-19T21:34:52.35499+02:00"
+generated: "2020-08-11T16:59:10.9510139+02:00"
